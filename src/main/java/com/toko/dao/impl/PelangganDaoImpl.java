@@ -59,7 +59,8 @@ public class PelangganDaoImpl implements PelangganDao {
                     VALUES (?, ?, ?, ?)
                     """;
 
-            PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement stmt = connection.prepareStatement(query,
+                    Statement.RETURN_GENERATED_KEYS);
             stmt.setString(1, domain.getNama());
             stmt.setString(2, domain.getAlamat());
             stmt.setString(3, domain.getEmail());
